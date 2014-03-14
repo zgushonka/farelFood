@@ -7,6 +7,7 @@
 //
 
 #import "FRLAppDelegate.h"
+#import "FRLProducts.h"
 
 @implementation FRLAppDelegate
 
@@ -16,6 +17,19 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+    FRLProducts *productsDB = [FRLProducts sharedDataBase];
+    [productsDB loadXMLFile:@"Products.xml" loadedSuccessfully:nil];
+    
+    NSLog(@"There are %d products in DB", [productsDB countOfProducts]);
+    
+    
+    
+    
+    
+    
+    
     return YES;
 }
 

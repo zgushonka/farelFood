@@ -21,6 +21,7 @@
 		4B93760518D2FCB80056D7D0 /* farelFoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93760418D2FCB80056D7D0 /* farelFoodTests.m */; };
 		4B93760F18D303440056D7D0 /* Products.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4B93760E18D303440056D7D0 /* Products.xml */; };
 		4B93761318D307B40056D7D0 /* FRLProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93761218D307B30056D7D0 /* FRLProduct.m */; };
+		4B9F931D18D3279000752625 /* FRLProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F931C18D3279000752625 /* FRLProducts.m */; };
 		881DB9A85B32425E8DEAF70C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1330118CA84FF983195140 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		4B93760E18D303440056D7D0 /* Products.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Products.xml; path = farelFood/Products/Products.xml; sourceTree = "<group>"; };
 		4B93761118D307B30056D7D0 /* FRLProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLProduct.h; sourceTree = "<group>"; };
 		4B93761218D307B30056D7D0 /* FRLProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLProduct.m; sourceTree = "<group>"; };
+		4B9F931B18D3279000752625 /* FRLProducts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLProducts.h; sourceTree = "<group>"; };
+		4B9F931C18D3279000752625 /* FRLProducts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLProducts.m; sourceTree = "<group>"; };
 		9D1330118CA84FF983195140 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -171,6 +174,8 @@
 			children = (
 				4B93761118D307B30056D7D0 /* FRLProduct.h */,
 				4B93761218D307B30056D7D0 /* FRLProduct.m */,
+				4B9F931B18D3279000752625 /* FRLProducts.h */,
+				4B9F931C18D3279000752625 /* FRLProducts.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9F931D18D3279000752625 /* FRLProducts.m in Sources */,
 				4B93761318D307B40056D7D0 /* FRLProduct.m in Sources */,
 				4B9375EC18D2FCB80056D7D0 /* main.m in Sources */,
 				4B9375F018D2FCB80056D7D0 /* FRLAppDelegate.m in Sources */,

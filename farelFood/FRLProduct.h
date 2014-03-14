@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSString *image;
 @property (nonatomic, strong) NSMutableSet *tags;
 
 - (instancetype) initWithName:(NSString *)name andDescription:(NSString *)description andTags:(NSMutableSet *)tags;
