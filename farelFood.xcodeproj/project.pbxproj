@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B9375E018D2FCB80056D7D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375DF18D2FCB80056D7D0 /* Foundation.framework */; };
+		4B9375E218D2FCB80056D7D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375E118D2FCB80056D7D0 /* CoreGraphics.framework */; };
+		4B9375E418D2FCB80056D7D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375E318D2FCB80056D7D0 /* UIKit.framework */; };
+		4B9375EA18D2FCB80056D7D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B9375E818D2FCB80056D7D0 /* InfoPlist.strings */; };
+		4B9375EC18D2FCB80056D7D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9375EB18D2FCB80056D7D0 /* main.m */; };
+		4B9375F018D2FCB80056D7D0 /* FRLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9375EF18D2FCB80056D7D0 /* FRLAppDelegate.m */; };
+		4B9375F218D2FCB80056D7D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B9375F118D2FCB80056D7D0 /* Images.xcassets */; };
+		4B9375F918D2FCB80056D7D0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375F818D2FCB80056D7D0 /* XCTest.framework */; };
+		4B9375FA18D2FCB80056D7D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375DF18D2FCB80056D7D0 /* Foundation.framework */; };
+		4B9375FB18D2FCB80056D7D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375E318D2FCB80056D7D0 /* UIKit.framework */; };
+		4B93760318D2FCB80056D7D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B93760118D2FCB80056D7D0 /* InfoPlist.strings */; };
+		4B93760518D2FCB80056D7D0 /* farelFoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93760418D2FCB80056D7D0 /* farelFoodTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B9375FC18D2FCB80056D7D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B9375D418D2FCB80056D7D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B9375DB18D2FCB80056D7D0;
+			remoteInfo = farelFood;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4B9375DC18D2FCB80056D7D0 /* farelFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = farelFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9375DF18D2FCB80056D7D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4B9375E118D2FCB80056D7D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4B9375E318D2FCB80056D7D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4B9375E718D2FCB80056D7D0 /* farelFood-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "farelFood-Info.plist"; sourceTree = "<group>"; };
+		4B9375E918D2FCB80056D7D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B9375EB18D2FCB80056D7D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B9375ED18D2FCB80056D7D0 /* farelFood-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "farelFood-Prefix.pch"; sourceTree = "<group>"; };
+		4B9375EE18D2FCB80056D7D0 /* FRLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRLAppDelegate.h; sourceTree = "<group>"; };
+		4B9375EF18D2FCB80056D7D0 /* FRLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRLAppDelegate.m; sourceTree = "<group>"; };
+		4B9375F118D2FCB80056D7D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4B9375F718D2FCB80056D7D0 /* farelFoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = farelFoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9375F818D2FCB80056D7D0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4B93760018D2FCB80056D7D0 /* farelFoodTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "farelFoodTests-Info.plist"; sourceTree = "<group>"; };
+		4B93760218D2FCB80056D7D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B93760418D2FCB80056D7D0 /* farelFoodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = farelFoodTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B9375D918D2FCB80056D7D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B9375E218D2FCB80056D7D0 /* CoreGraphics.framework in Frameworks */,
+				4B9375E418D2FCB80056D7D0 /* UIKit.framework in Frameworks */,
+				4B9375E018D2FCB80056D7D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B9375F418D2FCB80056D7D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B9375F918D2FCB80056D7D0 /* XCTest.framework in Frameworks */,
+				4B9375FB18D2FCB80056D7D0 /* UIKit.framework in Frameworks */,
+				4B9375FA18D2FCB80056D7D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B9375D318D2FCB80056D7D0 = {
+			isa = PBXGroup;
+			children = (
+				4B9375E518D2FCB80056D7D0 /* farelFood */,
+				4B9375FE18D2FCB80056D7D0 /* farelFoodTests */,
+				4B9375DE18D2FCB80056D7D0 /* Frameworks */,
+				4B9375DD18D2FCB80056D7D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B9375DD18D2FCB80056D7D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B9375DC18D2FCB80056D7D0 /* farelFood.app */,
+				4B9375F718D2FCB80056D7D0 /* farelFoodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B9375DE18D2FCB80056D7D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B9375DF18D2FCB80056D7D0 /* Foundation.framework */,
+				4B9375E118D2FCB80056D7D0 /* CoreGraphics.framework */,
+				4B9375E318D2FCB80056D7D0 /* UIKit.framework */,
+				4B9375F818D2FCB80056D7D0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B9375E518D2FCB80056D7D0 /* farelFood */ = {
+			isa = PBXGroup;
+			children = (
+				4B9375EE18D2FCB80056D7D0 /* FRLAppDelegate.h */,
+				4B9375EF18D2FCB80056D7D0 /* FRLAppDelegate.m */,
+				4B9375F118D2FCB80056D7D0 /* Images.xcassets */,
+				4B9375E618D2FCB80056D7D0 /* Supporting Files */,
+			);
+			path = farelFood;
+			sourceTree = "<group>";
+		};
+		4B9375E618D2FCB80056D7D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B9375E718D2FCB80056D7D0 /* farelFood-Info.plist */,
+				4B9375E818D2FCB80056D7D0 /* InfoPlist.strings */,
+				4B9375EB18D2FCB80056D7D0 /* main.m */,
+				4B9375ED18D2FCB80056D7D0 /* farelFood-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B9375FE18D2FCB80056D7D0 /* farelFoodTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B93760418D2FCB80056D7D0 /* farelFoodTests.m */,
+				4B9375FF18D2FCB80056D7D0 /* Supporting Files */,
+			);
+			path = farelFoodTests;
+			sourceTree = "<group>";
+		};
+		4B9375FF18D2FCB80056D7D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B93760018D2FCB80056D7D0 /* farelFoodTests-Info.plist */,
+				4B93760118D2FCB80056D7D0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B9375DB18D2FCB80056D7D0 /* farelFood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B93760818D2FCB80056D7D0 /* Build configuration list for PBXNativeTarget "farelFood" */;
+			buildPhases = (
+				4B9375D818D2FCB80056D7D0 /* Sources */,
+				4B9375D918D2FCB80056D7D0 /* Frameworks */,
+				4B9375DA18D2FCB80056D7D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = farelFood;
+			productName = farelFood;
+			productReference = 4B9375DC18D2FCB80056D7D0 /* farelFood.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B9375F618D2FCB80056D7D0 /* farelFoodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B93760B18D2FCB80056D7D0 /* Build configuration list for PBXNativeTarget "farelFoodTests" */;
+			buildPhases = (
+				4B9375F318D2FCB80056D7D0 /* Sources */,
+				4B9375F418D2FCB80056D7D0 /* Frameworks */,
+				4B9375F518D2FCB80056D7D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B9375FD18D2FCB80056D7D0 /* PBXTargetDependency */,
+			);
+			name = farelFoodTests;
+			productName = farelFoodTests;
+			productReference = 4B9375F718D2FCB80056D7D0 /* farelFoodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B9375D418D2FCB80056D7D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FRL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = farel;
+				TargetAttributes = {
+					4B9375F618D2FCB80056D7D0 = {
+						TestTargetID = 4B9375DB18D2FCB80056D7D0;
+					};
+				};
+			};
+			buildConfigurationList = 4B9375D718D2FCB80056D7D0 /* Build configuration list for PBXProject "farelFood" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4B9375D318D2FCB80056D7D0;
+			productRefGroup = 4B9375DD18D2FCB80056D7D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B9375DB18D2FCB80056D7D0 /* farelFood */,
+				4B9375F618D2FCB80056D7D0 /* farelFoodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B9375DA18D2FCB80056D7D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B9375EA18D2FCB80056D7D0 /* InfoPlist.strings in Resources */,
+				4B9375F218D2FCB80056D7D0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B9375F518D2FCB80056D7D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B93760318D2FCB80056D7D0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B9375D818D2FCB80056D7D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B9375EC18D2FCB80056D7D0 /* main.m in Sources */,
+				4B9375F018D2FCB80056D7D0 /* FRLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B9375F318D2FCB80056D7D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B93760518D2FCB80056D7D0 /* farelFoodTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B9375FD18D2FCB80056D7D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B9375DB18D2FCB80056D7D0 /* farelFood */;
+			targetProxy = 4B9375FC18D2FCB80056D7D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B9375E818D2FCB80056D7D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B9375E918D2FCB80056D7D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4B93760118D2FCB80056D7D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B93760218D2FCB80056D7D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B93760618D2FCB80056D7D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4B93760718D2FCB80056D7D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B93760918D2FCB80056D7D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "farelFood/farelFood-Prefix.pch";
+				INFOPLIST_FILE = "farelFood/farelFood-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4B93760A18D2FCB80056D7D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "farelFood/farelFood-Prefix.pch";
+				INFOPLIST_FILE = "farelFood/farelFood-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4B93760C18D2FCB80056D7D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/farelFood.app/farelFood";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "farelFood/farelFood-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "farelFoodTests/farelFoodTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4B93760D18D2FCB80056D7D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/farelFood.app/farelFood";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "farelFood/farelFood-Prefix.pch";
+				INFOPLIST_FILE = "farelFoodTests/farelFoodTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B9375D718D2FCB80056D7D0 /* Build configuration list for PBXProject "farelFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B93760618D2FCB80056D7D0 /* Debug */,
+				4B93760718D2FCB80056D7D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B93760818D2FCB80056D7D0 /* Build configuration list for PBXNativeTarget "farelFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B93760918D2FCB80056D7D0 /* Debug */,
+				4B93760A18D2FCB80056D7D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4B93760B18D2FCB80056D7D0 /* Build configuration list for PBXNativeTarget "farelFoodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B93760C18D2FCB80056D7D0 /* Debug */,
+				4B93760D18D2FCB80056D7D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B9375D418D2FCB80056D7D0 /* Project object */;
+}
