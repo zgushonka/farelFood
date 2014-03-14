@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<product_list version="1.0">
+
+<products>
+
+<product>
+ <name>Banana</name>
+ <description>A tasty banana</description>
+ <image>/Users/crestana/1.jpg</image>
+ <tag>fruits</tag>
+ <tag>deserts</tag>
+ <tag>carbs</tag>
+</product>
+
+<product>
+ <name>Cherry</name>
+ <description>A juicy cheery</description>
+ <image>/Users/crestana/2.jpg</image>
+ <tag>fruits</tag>
+ <tag>deserts</tag>
+ <tag>carbs</tag>
+</product>
+
+<product>
+ <name>Potato</name>
+ <description>A great potato</description>
+ <image>/Users/crestana/3.jpg</image>
+ <tag>vegetables</tag>
+ <tag>carbs</tag>
+</product>
+
+</products>
+
+</product_list>
