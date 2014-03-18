@@ -10,6 +10,7 @@
 //#import "FRLProducts.h"
 #import "FRLTableAllCategories.h"
 #import "FRLTableFavourites.h"
+#import "FRLMainCategories.h"
 
 @implementation FRLAppDelegate
 
@@ -27,6 +28,9 @@
     [self.window makeKeyAndVisible];
     
     FRLTableAllCategories *categoriesController = [[FRLTableAllCategories alloc] init];
+    categoriesController.mainCategoriesDatabase = [[FRLMainCategories alloc] init];
+    categoriesController.title = @"Categories";
+    
     FRLTableFavourites *favouritesController = [[FRLTableFavourites alloc] init];
     
     UINavigationController *categoriesNavigationController = [[UINavigationController alloc] initWithRootViewController:categoriesController];

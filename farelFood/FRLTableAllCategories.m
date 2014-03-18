@@ -7,6 +7,8 @@
 //
 
 #import "FRLTableAllCategories.h"
+#import "FRLTableViewCell.h"
+#import "FRLMainCategory.h"
 
 @interface FRLTableAllCategories ()
 
@@ -17,6 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"FRLTableViewCell" bundle:nil] forCellReuseIdentifier:@"CategoryIdentifier"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,34 +48,33 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
+    return [self.mainCategoriesDatabase count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    tableView.backgroundColor = [UIColor blackColor];
-    
-    self.tableView.backgroundColor = [UIColor blueColor];
-    
-    
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-//    cell.contentView.backgroundColor = [UIColor yellowColor];
-
-    UILabel *label = [[UILabel alloc ] initWithFrame:CGRectMake(20.0, 0.0, 50.0, 50.0)];
-    label.textColor = [UIColor blackColor];
-    label.backgroundColor = [UIColor yellowColor];
-    label.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(14.0)];
-    label.text = @"Tester";
-    
-    [cell.contentView addSubview:label];
-    
-    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+ 
+    FRLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CategoryIdentifier"];
+    if (cell == nil) {
+        cell = [[FRLTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CategoryIdentifier"];
+    }
     // Configure the cell...
     
+    FRLMainCategory *currentCategory = [self.mainCategoriesDatabase categoryAtIndex:indexPath.row];
+    
+    NSAttributedString *currentCategoryAttributedName = [[NSAttributedString alloc] initWithString:currentCategory.name attributes:@{ NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleBody]}];
+
+    
+    NSAttributedString *currentCategoryAttributedDescription = [[NSAttributedString alloc] initWithString:currentCategory.description attributes:@{ NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1]}];
+    
+    [cell.name setAttributedText:currentCategoryAttributedName];
+    [cell.description setAttributedText:currentCategoryAttributedDescription];
+    
+    
+
     return cell;
+    
 }
 
 

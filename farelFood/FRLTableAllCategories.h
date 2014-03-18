@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FRLProducts.h"
+#import "FRLMainCategories.h"
 
 @interface FRLTableAllCategories : UITableViewController
-@property (nonatomic, weak) FRLProducts *database;
+@property (nonatomic, strong) FRLMainCategories *mainCategoriesDatabase;
+//@property (nonatomic, strong) 
 
 @end

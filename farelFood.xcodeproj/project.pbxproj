@@ -11,6 +11,10 @@
 		4B86E3BF18D837CF0087518A /* FRLTableAllCategories.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B86E3BD18D837CF0087518A /* FRLTableAllCategories.xib */; };
 		4B86E3C418D83B5D0087518A /* FRLTableFavourites.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3C218D83B5D0087518A /* FRLTableFavourites.m */; };
 		4B86E3C518D83B5D0087518A /* FRLTableFavourites.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B86E3C318D83B5D0087518A /* FRLTableFavourites.xib */; };
+		4B86E3C918D872FF0087518A /* FRLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3C718D872FF0087518A /* FRLTableViewCell.m */; };
+		4B86E3CA18D872FF0087518A /* FRLTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B86E3C818D872FF0087518A /* FRLTableViewCell.xib */; };
+		4B86E3CD18D894A90087518A /* FRLMainCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3CC18D894A90087518A /* FRLMainCategories.m */; };
+		4B86E3D018D89CF10087518A /* FRLMainCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3CF18D89CF10087518A /* FRLMainCategory.m */; };
 		4B9375E018D2FCB80056D7D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375DF18D2FCB80056D7D0 /* Foundation.framework */; };
 		4B9375E218D2FCB80056D7D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375E118D2FCB80056D7D0 /* CoreGraphics.framework */; };
 		4B9375E418D2FCB80056D7D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375E318D2FCB80056D7D0 /* UIKit.framework */; };
@@ -47,6 +51,13 @@
 		4B86E3C118D83B5D0087518A /* FRLTableFavourites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLTableFavourites.h; sourceTree = "<group>"; };
 		4B86E3C218D83B5D0087518A /* FRLTableFavourites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLTableFavourites.m; sourceTree = "<group>"; };
 		4B86E3C318D83B5D0087518A /* FRLTableFavourites.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRLTableFavourites.xib; sourceTree = "<group>"; };
+		4B86E3C618D872FF0087518A /* FRLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLTableViewCell.h; sourceTree = "<group>"; };
+		4B86E3C718D872FF0087518A /* FRLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLTableViewCell.m; sourceTree = "<group>"; };
+		4B86E3C818D872FF0087518A /* FRLTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRLTableViewCell.xib; sourceTree = "<group>"; };
+		4B86E3CB18D894A90087518A /* FRLMainCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLMainCategories.h; sourceTree = "<group>"; };
+		4B86E3CC18D894A90087518A /* FRLMainCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLMainCategories.m; sourceTree = "<group>"; };
+		4B86E3CE18D89CF10087518A /* FRLMainCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLMainCategory.h; sourceTree = "<group>"; };
+		4B86E3CF18D89CF10087518A /* FRLMainCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLMainCategory.m; sourceTree = "<group>"; };
 		4B9375DC18D2FCB80056D7D0 /* farelFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = farelFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9375DF18D2FCB80056D7D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B9375E118D2FCB80056D7D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,6 +110,9 @@
 		4B86E3C018D837D90087518A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B86E3C618D872FF0087518A /* FRLTableViewCell.h */,
+				4B86E3C718D872FF0087518A /* FRLTableViewCell.m */,
+				4B86E3C818D872FF0087518A /* FRLTableViewCell.xib */,
 				4B86E3C118D83B5D0087518A /* FRLTableFavourites.h */,
 				4B86E3C218D83B5D0087518A /* FRLTableFavourites.m */,
 				4B86E3C318D83B5D0087518A /* FRLTableFavourites.xib */,
@@ -200,6 +214,10 @@
 				4B93761218D307B30056D7D0 /* FRLProduct.m */,
 				4B9F931B18D3279000752625 /* FRLProducts.h */,
 				4B9F931C18D3279000752625 /* FRLProducts.m */,
+				4B86E3CB18D894A90087518A /* FRLMainCategories.h */,
+				4B86E3CC18D894A90087518A /* FRLMainCategories.m */,
+				4B86E3CE18D89CF10087518A /* FRLMainCategory.h */,
+				4B86E3CF18D89CF10087518A /* FRLMainCategory.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -284,6 +302,7 @@
 			files = (
 				4B9375EA18D2FCB80056D7D0 /* InfoPlist.strings in Resources */,
 				4B86E3BF18D837CF0087518A /* FRLTableAllCategories.xib in Resources */,
+				4B86E3CA18D872FF0087518A /* FRLTableViewCell.xib in Resources */,
 				4B9375F218D2FCB80056D7D0 /* Images.xcassets in Resources */,
 				4B93760F18D303440056D7D0 /* Products.xml in Resources */,
 				4B86E3C518D83B5D0087518A /* FRLTableFavourites.xib in Resources */,
@@ -339,9 +358,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B9F931D18D3279000752625 /* FRLProducts.m in Sources */,
+				4B86E3C918D872FF0087518A /* FRLTableViewCell.m in Sources */,
 				4B86E3BE18D837CF0087518A /* FRLTableAllCategories.m in Sources */,
+				4B86E3D018D89CF10087518A /* FRLMainCategory.m in Sources */,
 				4B93761318D307B40056D7D0 /* FRLProduct.m in Sources */,
 				4B9375EC18D2FCB80056D7D0 /* main.m in Sources */,
+				4B86E3CD18D894A90087518A /* FRLMainCategories.m in Sources */,
 				4B9375F018D2FCB80056D7D0 /* FRLAppDelegate.m in Sources */,
 				4B86E3C418D83B5D0087518A /* FRLTableFavourites.m in Sources */,
 			);
