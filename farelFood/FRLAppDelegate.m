@@ -7,9 +7,17 @@
 //
 
 #import "FRLAppDelegate.h"
-#import "FRLProducts.h"
+//#import "FRLProducts.h"
+#import "FRLTableAllCategories.h"
+#import "FRLTableFavourites.h"
 
 @implementation FRLAppDelegate
+
+- (void)setupControllers
+{
+    
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -18,18 +26,22 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    FRLTableAllCategories *categoriesController = [[FRLTableAllCategories alloc] init];
+    FRLTableFavourites *favouritesController = [[FRLTableFavourites alloc] init];
     
-    FRLProducts *productsDB = [FRLProducts sharedDataBase];
-    [productsDB loadXMLFile:@"Products.xml" loadedSuccessfully:nil];
+    UINavigationController *categoriesNavigationController = [[UINavigationController alloc] initWithRootViewController:categoriesController];
+    UINavigationController *favouritesNavigationController = [[UINavigationController alloc] initWithRootViewController:favouritesController];
     
-    NSLog(@"There are %d products in DB", [productsDB countOfProducts]);
-    
-    
-    
-    
-    
+    categoriesNavigationController.title = @"All products";
+    favouritesNavigationController.title = @"Favourites";
     
     
+    UITabBarController *mainTabController = [[UITabBarController alloc] init];
+    
+    [mainTabController addChildViewController:categoriesNavigationController];
+    [mainTabController addChildViewController:favouritesNavigationController];
+    
+    self.window.rootViewController = mainTabController;
     return YES;
 }
 

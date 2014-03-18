@@ -42,7 +42,6 @@
         newProduct.description = [rxmlProduct child:@"description"].text;
         newProduct.image = [rxmlProduct child:@"image"].text;
         
-        
         NSMutableSet *newProductTags = [[NSMutableSet alloc] init];
         
         [rxmlProduct iterate:@"tag" usingBlock:^(RXMLElement *rxmlProductTag){

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B86E3BE18D837CF0087518A /* FRLTableAllCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3BC18D837CF0087518A /* FRLTableAllCategories.m */; };
+		4B86E3BF18D837CF0087518A /* FRLTableAllCategories.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B86E3BD18D837CF0087518A /* FRLTableAllCategories.xib */; };
+		4B86E3C418D83B5D0087518A /* FRLTableFavourites.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3C218D83B5D0087518A /* FRLTableFavourites.m */; };
+		4B86E3C518D83B5D0087518A /* FRLTableFavourites.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B86E3C318D83B5D0087518A /* FRLTableFavourites.xib */; };
 		4B9375E018D2FCB80056D7D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375DF18D2FCB80056D7D0 /* Foundation.framework */; };
 		4B9375E218D2FCB80056D7D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375E118D2FCB80056D7D0 /* CoreGraphics.framework */; };
 		4B9375E418D2FCB80056D7D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375E318D2FCB80056D7D0 /* UIKit.framework */; };
@@ -37,6 +41,12 @@
 
 /* Begin PBXFileReference section */
 		48B935B69F0E4537B115F1BA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		4B86E3BB18D837CF0087518A /* FRLTableAllCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLTableAllCategories.h; sourceTree = "<group>"; };
+		4B86E3BC18D837CF0087518A /* FRLTableAllCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLTableAllCategories.m; sourceTree = "<group>"; };
+		4B86E3BD18D837CF0087518A /* FRLTableAllCategories.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRLTableAllCategories.xib; sourceTree = "<group>"; };
+		4B86E3C118D83B5D0087518A /* FRLTableFavourites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLTableFavourites.h; sourceTree = "<group>"; };
+		4B86E3C218D83B5D0087518A /* FRLTableFavourites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLTableFavourites.m; sourceTree = "<group>"; };
+		4B86E3C318D83B5D0087518A /* FRLTableFavourites.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRLTableFavourites.xib; sourceTree = "<group>"; };
 		4B9375DC18D2FCB80056D7D0 /* farelFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = farelFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9375DF18D2FCB80056D7D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B9375E118D2FCB80056D7D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,6 +96,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B86E3C018D837D90087518A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B86E3C118D83B5D0087518A /* FRLTableFavourites.h */,
+				4B86E3C218D83B5D0087518A /* FRLTableFavourites.m */,
+				4B86E3C318D83B5D0087518A /* FRLTableFavourites.xib */,
+				4B86E3BB18D837CF0087518A /* FRLTableAllCategories.h */,
+				4B86E3BC18D837CF0087518A /* FRLTableAllCategories.m */,
+				4B86E3BD18D837CF0087518A /* FRLTableAllCategories.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		4B9375D318D2FCB80056D7D0 = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +144,8 @@
 		4B9375E518D2FCB80056D7D0 /* farelFood */ = {
 			isa = PBXGroup;
 			children = (
+				4B86E3C018D837D90087518A /* Controllers */,
 				4B93761418D307BE0056D7D0 /* Model */,
-				4B9375EE18D2FCB80056D7D0 /* FRLAppDelegate.h */,
-				4B9375EF18D2FCB80056D7D0 /* FRLAppDelegate.m */,
 				4B9375F118D2FCB80056D7D0 /* Images.xcassets */,
 				4B9375E618D2FCB80056D7D0 /* Supporting Files */,
 			);
@@ -133,6 +155,8 @@
 		4B9375E618D2FCB80056D7D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B9375EE18D2FCB80056D7D0 /* FRLAppDelegate.h */,
+				4B9375EF18D2FCB80056D7D0 /* FRLAppDelegate.m */,
 				4B93761018D303720056D7D0 /* Products Source */,
 				4B9375E718D2FCB80056D7D0 /* farelFood-Info.plist */,
 				4B9375E818D2FCB80056D7D0 /* InfoPlist.strings */,
@@ -259,8 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B9375EA18D2FCB80056D7D0 /* InfoPlist.strings in Resources */,
+				4B86E3BF18D837CF0087518A /* FRLTableAllCategories.xib in Resources */,
 				4B9375F218D2FCB80056D7D0 /* Images.xcassets in Resources */,
 				4B93760F18D303440056D7D0 /* Products.xml in Resources */,
+				4B86E3C518D83B5D0087518A /* FRLTableFavourites.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,9 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B9F931D18D3279000752625 /* FRLProducts.m in Sources */,
+				4B86E3BE18D837CF0087518A /* FRLTableAllCategories.m in Sources */,
 				4B93761318D307B40056D7D0 /* FRLProduct.m in Sources */,
 				4B9375EC18D2FCB80056D7D0 /* main.m in Sources */,
 				4B9375F018D2FCB80056D7D0 /* FRLAppDelegate.m in Sources */,
+				4B86E3C418D83B5D0087518A /* FRLTableFavourites.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
