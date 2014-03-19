@@ -48,7 +48,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.mainCategoriesDatabase count];
+    return [self.mainCategoriesDatabase countOfMainCategories];
 }
 
 

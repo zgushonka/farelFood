@@ -15,12 +15,15 @@
 
 
 #import <Foundation/Foundation.h>
-#import "FRLMainCategory.h"
+@class FRLMainCategory;
 
 @interface FRLMainCategories : NSObject
-@property (strong, nonatomic) NSMutableArray *categories;
+//@property (strong, nonatomic) NSMutableArray *categories;
 
++ (FRLMainCategories *)sharedDataBase;
+
+- (void)loadXMLFile:(NSString *)xmlFile loadedSuccessfully:(BOOL *)status;
+- (NSUInteger)countOfMainCategories;
 - (FRLMainCategory *)categoryAtIndex:(NSUInteger)index;
-- (NSUInteger)count;
 
 @end

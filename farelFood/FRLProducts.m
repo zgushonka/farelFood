@@ -11,7 +11,7 @@
 #import "RXMLElement.h"
 
 @interface FRLProducts ()
-@property (strong, nonatomic, readwrite) NSMutableArray *products;
+@property (strong, nonatomic) NSMutableArray *products;
 @end
 
 @implementation FRLProducts
