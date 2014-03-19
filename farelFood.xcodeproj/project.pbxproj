@@ -15,6 +15,7 @@
 		4B86E3CA18D872FF0087518A /* FRLTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B86E3C818D872FF0087518A /* FRLTableViewCell.xib */; };
 		4B86E3CD18D894A90087518A /* FRLMainCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3CC18D894A90087518A /* FRLMainCategories.m */; };
 		4B86E3D018D89CF10087518A /* FRLMainCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3CF18D89CF10087518A /* FRLMainCategory.m */; };
+		4B86E3D218D98B4B0087518A /* Main Categories.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4B86E3D118D98B4B0087518A /* Main Categories.xml */; };
 		4B9375E018D2FCB80056D7D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375DF18D2FCB80056D7D0 /* Foundation.framework */; };
 		4B9375E218D2FCB80056D7D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375E118D2FCB80056D7D0 /* CoreGraphics.framework */; };
 		4B9375E418D2FCB80056D7D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9375E318D2FCB80056D7D0 /* UIKit.framework */; };
@@ -58,6 +59,7 @@
 		4B86E3CC18D894A90087518A /* FRLMainCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLMainCategories.m; sourceTree = "<group>"; };
 		4B86E3CE18D89CF10087518A /* FRLMainCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLMainCategory.h; sourceTree = "<group>"; };
 		4B86E3CF18D89CF10087518A /* FRLMainCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLMainCategory.m; sourceTree = "<group>"; };
+		4B86E3D118D98B4B0087518A /* Main Categories.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Main Categories.xml"; path = "farelFood/Products/Main Categories.xml"; sourceTree = "<group>"; };
 		4B9375DC18D2FCB80056D7D0 /* farelFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = farelFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9375DF18D2FCB80056D7D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B9375E118D2FCB80056D7D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -201,6 +203,7 @@
 		4B93761018D303720056D7D0 /* Products Source */ = {
 			isa = PBXGroup;
 			children = (
+				4B86E3D118D98B4B0087518A /* Main Categories.xml */,
 				4B93760E18D303440056D7D0 /* Products.xml */,
 			);
 			name = "Products Source";
@@ -303,6 +306,7 @@
 				4B9375EA18D2FCB80056D7D0 /* InfoPlist.strings in Resources */,
 				4B86E3BF18D837CF0087518A /* FRLTableAllCategories.xib in Resources */,
 				4B86E3CA18D872FF0087518A /* FRLTableViewCell.xib in Resources */,
+				4B86E3D218D98B4B0087518A /* Main Categories.xml in Resources */,
 				4B9375F218D2FCB80056D7D0 /* Images.xcassets in Resources */,
 				4B93760F18D303440056D7D0 /* Products.xml in Resources */,
 				4B86E3C518D83B5D0087518A /* FRLTableFavourites.xib in Resources */,

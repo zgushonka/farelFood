@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface FRLProducts : NSObject
-@property (nonatomic, strong, readonly) NSMutableArray *products;
+//@property (nonatomic, strong, readonly) NSMutableArray *products;
 
 + (FRLProducts *)sharedDataBase;
 
