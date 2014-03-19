@@ -7,7 +7,7 @@
 //
 
 #import "FRLAppDelegate.h"
-//#import "FRLProducts.h"
+#import "FRLProducts.h"
 #import "FRLTableAllCategories.h"
 #import "FRLTableFavourites.h"
 #import "FRLMainCategories.h"
@@ -27,10 +27,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    /*
+    
     FRLTableAllCategories *categoriesController = [[FRLTableAllCategories alloc] init];
-    categoriesController.mainCategoriesDatabase = [[FRLMainCategories alloc] init];
+    categoriesController.mainCategoriesDatabase = [FRLMainCategories sharedDataBase];
     [categoriesController.mainCategoriesDatabase loadXMLFile:@"Main Categories.xml" loadedSuccessfully:nil];
+    
+    categoriesController.productsDatabase = [FRLProducts sharedDataBase];
+    [categoriesController.productsDatabase loadXMLFile:@"Products.xml" loadedSuccessfully:nil];
+        
     categoriesController.title = @"Categories";
     
     FRLTableFavourites *favouritesController = [[FRLTableFavourites alloc] init];
@@ -48,12 +52,6 @@
     [mainTabController addChildViewController:favouritesNavigationController];
     
     self.window.rootViewController = mainTabController;
-    */
-    
-    FRLMainCategories *database = [FRLMainCategories sharedDataBase];
-    [database loadXMLFile:@"Main Categories.xml" loadedSuccessfully:nil];
-    
-    NSLog(@"There are %d categories", [database countOfMainCategories]);
     
     return YES;
 }

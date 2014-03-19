@@ -1,29 +1,22 @@
 //
-//  FRLTableAllCategories.m
+//  FRLProductList.m
 //  farelFood
 //
-//  Created by crestana on 18/03/14.
+//  Created by crestana on 19/03/14.
 //  Copyright (c) 2014 farel. All rights reserved.
 //
 
-#import "FRLTableAllCategories.h"
-#import "FRLTableViewCell.h"
-#import "FRLMainCategory.h"
-#import "FRLMainCategories.h"
-#import "FRLProducts.h"
 #import "FRLProductList.h"
 
-@interface FRLTableAllCategories ()
+@interface FRLProductList ()
 
 @end
 
-@implementation FRLTableAllCategories
+@implementation FRLProductList
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.tableView registerNib:[UINib nibWithNibName:@"FRLTableViewCell" bundle:nil] forCellReuseIdentifier:@"CategoryIdentifier"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -42,56 +35,28 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.mainCategoriesDatabase countOfMainCategories];
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
- 
-    FRLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CategoryIdentifier"];
-    if (cell == nil) {
-        cell = [[FRLTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CategoryIdentifier"];
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    FRLMainCategory *currentCategory = [self.mainCategoriesDatabase categoryAtIndex:indexPath.row];
+    // Configure the cell...
     
-    NSAttributedString *currentCategoryAttributedName = [[NSAttributedString alloc] initWithString:currentCategory.name attributes:@{ NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleBody]}];
-
-    
-    NSAttributedString *currentCategoryAttributedDescription = [[NSAttributedString alloc] initWithString:currentCategory.description attributes:@{ NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1]}];
-    
-    [cell.name setAttributedText:currentCategoryAttributedName];
-    [cell.description setAttributedText:currentCategoryAttributedDescription];
-    
-
     return cell;
-    
 }
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    FRLMainCategory *selectedCategory = [self.mainCategoriesDatabase categoryAtIndex:indexPath.row];
-    NSArray *foundProducts = [self.productsDatabase productsConformingTags:selectedCategory.tags];
-    
-    FRLProductList *foundProductsController = [[FRLProductList alloc] init];
-    foundProductsController.productsToDisplay = foundProducts;
-    foundProductsController.title = selectedCategory.name;
-    
-    [self.navigationController pushViewController:foundProductsController animated:YES];
-}
-
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
