@@ -33,6 +33,8 @@
 		4B93760F18D303440056D7D0 /* Products.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4B93760E18D303440056D7D0 /* Products.xml */; };
 		4B93761318D307B40056D7D0 /* FRLProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93761218D307B30056D7D0 /* FRLProduct.m */; };
 		4B9F931D18D3279000752625 /* FRLProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F931C18D3279000752625 /* FRLProducts.m */; };
+		4BEF569C18DC775A00346BC5 /* FRLProductDetailed.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEF569A18DC775A00346BC5 /* FRLProductDetailed.m */; };
+		4BEF569D18DC775A00346BC5 /* FRLProductDetailed.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEF569B18DC775A00346BC5 /* FRLProductDetailed.xib */; };
 		881DB9A85B32425E8DEAF70C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1330118CA84FF983195140 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,9 @@
 		4B93761218D307B30056D7D0 /* FRLProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLProduct.m; sourceTree = "<group>"; };
 		4B9F931B18D3279000752625 /* FRLProducts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLProducts.h; sourceTree = "<group>"; };
 		4B9F931C18D3279000752625 /* FRLProducts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLProducts.m; sourceTree = "<group>"; };
+		4BEF569918DC775A00346BC5 /* FRLProductDetailed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLProductDetailed.h; sourceTree = "<group>"; };
+		4BEF569A18DC775A00346BC5 /* FRLProductDetailed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLProductDetailed.m; sourceTree = "<group>"; };
+		4BEF569B18DC775A00346BC5 /* FRLProductDetailed.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRLProductDetailed.xib; sourceTree = "<group>"; };
 		9D1330118CA84FF983195140 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +134,9 @@
 				4B86E3D818D9B69A0087518A /* FRLProductList.h */,
 				4B86E3D918D9B69A0087518A /* FRLProductList.m */,
 				4B86E3DA18D9B69A0087518A /* FRLProductList.xib */,
+				4BEF569918DC775A00346BC5 /* FRLProductDetailed.h */,
+				4BEF569A18DC775A00346BC5 /* FRLProductDetailed.m */,
+				4BEF569B18DC775A00346BC5 /* FRLProductDetailed.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +325,7 @@
 				4B86E3D218D98B4B0087518A /* Main Categories.xml in Resources */,
 				4B86E3DC18D9B69A0087518A /* FRLProductList.xib in Resources */,
 				4B9375F218D2FCB80056D7D0 /* Images.xcassets in Resources */,
+				4BEF569D18DC775A00346BC5 /* FRLProductDetailed.xib in Resources */,
 				4B93760F18D303440056D7D0 /* Products.xml in Resources */,
 				4B86E3C518D83B5D0087518A /* FRLTableFavourites.xib in Resources */,
 			);
@@ -374,6 +383,7 @@
 				4B86E3C918D872FF0087518A /* FRLTableViewCell.m in Sources */,
 				4B86E3BE18D837CF0087518A /* FRLTableAllCategories.m in Sources */,
 				4B86E3D018D89CF10087518A /* FRLMainCategory.m in Sources */,
+				4BEF569C18DC775A00346BC5 /* FRLProductDetailed.m in Sources */,
 				4B86E3DB18D9B69A0087518A /* FRLProductList.m in Sources */,
 				4B93761318D307B40056D7D0 /* FRLProduct.m in Sources */,
 				4B9375EC18D2FCB80056D7D0 /* main.m in Sources */,

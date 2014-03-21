@@ -9,6 +9,7 @@
 #import "FRLProductList.h"
 #import "FRLTableViewCell.h"
 #import "FRLProduct.h"
+#import "FRLProductDetailed.h"
 
 @interface FRLProductList ()
 
@@ -39,7 +40,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
@@ -51,7 +51,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [self.productsToDisplay count];
     NSLog (@"There are: %d", [self.productsToDisplay count]);
@@ -78,6 +77,18 @@
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FRLProduct *selectedProduct = [self.productsToDisplay objectAtIndex:indexPath.row];
+    FRLProductDetailed *detailedProductController = [[FRLProductDetailed alloc] init];
+    
+    detailedProductController.product = selectedProduct;
+    detailedProductController.title = selectedProduct.name;
+    
+    [self.navigationController pushViewController:detailedProductController animated:YES];
+}
+
 
 
 /*

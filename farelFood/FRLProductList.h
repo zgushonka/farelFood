@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FRLProductList : UITableViewController
-@property (nonatomic, weak) NSArray *productsToDisplay;
+@property (nonatomic, strong) NSArray *productsToDisplay;
 
 @end

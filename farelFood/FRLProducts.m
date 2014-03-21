@@ -41,6 +41,7 @@
         newProduct.name = [rxmlProduct child:@"name"].text;
         newProduct.description = [rxmlProduct child:@"description"].text;
         newProduct.image = [rxmlProduct child:@"image"].text;
+        newProduct.status = [rxmlProduct child:@"status"].text;
         
         NSMutableSet *newProductTags = [[NSMutableSet alloc] init];
         

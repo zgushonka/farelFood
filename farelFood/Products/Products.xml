@@ -8,6 +8,7 @@
  <name>Banana</name>
  <description>A tasty banana</description>
  <image>/Users/crestana/1.jpg</image>
+ <status>Allowed</status>
  <tag>fruits</tag>
  <tag>deserts</tag>
  <tag>carbs</tag>
@@ -17,6 +18,7 @@
  <name>Cherry</name>
  <description>A juicy cheery</description>
  <image>/Users/crestana/2.jpg</image>
+ <status>Allowed</status>
  <tag>fruits</tag>
  <tag>deserts</tag>
  <tag>carbs</tag>
@@ -26,6 +28,7 @@
  <name>Potato</name>
  <description>A great potato</description>
  <image>/Users/crestana/3.jpg</image>
+ <status>Allowed</status>
  <tag>vegetables</tag>
  <tag>carbs</tag>
 </product>

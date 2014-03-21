@@ -12,6 +12,9 @@
 #import "FRLTableFavourites.h"
 #import "FRLMainCategories.h"
 
+#import "FRLProductDetailed.h"
+
+
 @implementation FRLAppDelegate
 
 - (void)setupControllers
@@ -52,7 +55,7 @@
     [mainTabController addChildViewController:favouritesNavigationController];
     
     self.window.rootViewController = mainTabController;
-    
+  
     return YES;
 }
 
