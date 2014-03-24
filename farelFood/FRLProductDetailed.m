@@ -24,44 +24,73 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+//    NSLog(@"Content offset X = %f and Y = %f", scrollView.contentOffset.x, scrollView.contentOffset.y);
+}
+
+- (void)setupProductImage
+{
+    self.image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.product.image]];
+    self.image.frame = CGRectMake(0, 0, 320, 200);
+    [self.view addSubview:self.image];
+}
+
+- (void)setupProductStatus
+{
+    self.status = [[UILabel alloc] initWithFrame:CGRectMake(20, 205, 100, 50)];
+//    self.status.backgroundColor = [UIColor blackColor];
+    self.status.text = self.product.status;
+    self.status.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
+    if ([self.product.status isEqualToString:@"Allowed"]) {
+        self.status.textColor = [UIColor greenColor];
+    }
+    
+    if ([self.product.status isEqualToString:@"Not recommended"]) {
+        self.status.textColor = [UIColor redColor];
+    }
+    
+    [self.view addSubview:self.status];
+}
+
+- (void)setupProductDescription
+{
+    self.description = [[UITextView alloc] initWithFrame:CGRectMake(15, 250, 300, 0)];
+    self.description.text = self.product.description;
+    [self.description sizeToFit];
+    self.description.scrollEnabled = NO;
+    self.description.editable = NO;
+    [self.view addSubview:self.description];
+}
+
+
+
+- (void)setupViewSizeToFitContent
+{
+    self.view.contentSize = CGSizeMake(320, self.description.frame.origin.y + self.description.frame.size.height);
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view = [[UIScrollView alloc] init];
+    self.view.delegate = self;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.view.contentSize = CGSizeMake(320, 3000);
     
-    
-    self.image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.product.image]];
-    self.image.frame = CGRectMake(0, 0, 320, 200);
-
-    
-    self.description = [[UITextView alloc] initWithFrame:CGRectMake(15, 220, 300, 0)];
-    self.description.text = self.product.description;
-    [self.description sizeToFit];
-    self.description.scrollEnabled = NO;
-    self.description.editable = NO;
-    
-    [self.view addSubview:self.description];
-    [self.view addSubview:self.image];
-    
-    CGFloat viewHeight = self.description.frame.origin.y + self.description.frame.size.height;
-    self.view.contentSize = CGSizeMake(320, viewHeight);
-
-    
-    
-    // Do any additional setup after loading the view.
+    [self setupProductImage];
+    [self setupProductDescription];
+    [self setupProductStatus];
+    [self setupViewSizeToFitContent];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
