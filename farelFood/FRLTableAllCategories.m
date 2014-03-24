@@ -81,6 +81,7 @@
     
     [cell.name setAttributedText:currentCategoryAttributedName];
     [cell.description setAttributedText:currentCategoryAttributedDescription];
+    [cell.preview setImage:[UIImage imageNamed:currentCategory.image]];
     
 
     return cell;

@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface FRLTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *description;
+@property (strong, nonatomic) IBOutlet UIImageView *preview;
+@property (strong, nonatomic) IBOutlet UILabel *name;
+@property (strong, nonatomic) IBOutlet UILabel *description;
 
 
 

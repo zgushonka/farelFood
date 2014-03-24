@@ -7,21 +7,21 @@
 <category>
  <name>Fruits</name>
  <description>All fruits and berries</description>
- <image>/Users/crestana/1.jpg</image>
+ <image>fruits.jpg</image>
  <tag>fruits</tag>
 </category>
 
 <category>
  <name>Vegetables</name>
  <description>All vegetables here</description>
- <image>/Users/crestana/2.jpg</image>
+ <image>vegetables.jpg</image>
  <tag>vegetables</tag>
 </category>
 
 <category>
  <name>Bread</name>
  <description>All kinds of bread</description>
- <image>/Users/crestana/3.jpg</image>
+ <image>bread.jpg</image>
  <tag>bread</tag>
 </category>
 
