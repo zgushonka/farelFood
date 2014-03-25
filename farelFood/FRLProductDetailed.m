@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UITextView *description;
 @property (nonatomic, strong) UILabel *status;
 @property (nonatomic, strong) UIButton *favourites;
+@property (nonatomic, strong) UIView *statusView;
 
 @end
 
@@ -42,7 +43,7 @@
 
 - (void)setupProductStatus
 {
-    self.status = [[UILabel alloc] initWithFrame:CGRectMake(20, 205, 100, 50)];
+    self.status = [[UILabel alloc] initWithFrame:CGRectMake(20, 205, 150, 50)];
 //    self.status.backgroundColor = [UIColor blackColor];
     self.status.text = self.product.status;
     self.status.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
@@ -57,6 +58,16 @@
     
     [self.view addSubview:self.status];
 }
+
+- (void)setupFavouritesButton
+{
+    self.favourites = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.favourites.frame = CGRectMake(200, 205, 50, 50);
+    [self.favourites setTitle:@"fav" forState:UIControlStateNormal];
+    
+    [self.view addSubview:self.favourites];
+}
+
 
 - (void)setupProductDescription
 {
@@ -85,6 +96,14 @@
     [self setupProductImage];
     [self setupProductDescription];
     [self setupProductStatus];
+    
+    
+    /*
+    self.statusView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, 320, 60)];
+    self.statusView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:self.statusView];
+    */
+    
     [self setupViewSizeToFitContent];
 }
 
