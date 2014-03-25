@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B5FF63818E212B800DE9A0F /* FRLProductGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5FF63718E212B800DE9A0F /* FRLProductGroup.m */; };
 		4B86E3BE18D837CF0087518A /* FRLTableAllCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3BC18D837CF0087518A /* FRLTableAllCategories.m */; };
 		4B86E3BF18D837CF0087518A /* FRLTableAllCategories.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B86E3BD18D837CF0087518A /* FRLTableAllCategories.xib */; };
 		4B86E3C418D83B5D0087518A /* FRLTableFavourites.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3C218D83B5D0087518A /* FRLTableFavourites.m */; };
@@ -55,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		48B935B69F0E4537B115F1BA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		4B5FF63618E212B800DE9A0F /* FRLProductGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLProductGroup.h; sourceTree = "<group>"; };
+		4B5FF63718E212B800DE9A0F /* FRLProductGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLProductGroup.m; sourceTree = "<group>"; };
 		4B86E3BB18D837CF0087518A /* FRLTableAllCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLTableAllCategories.h; sourceTree = "<group>"; };
 		4B86E3BC18D837CF0087518A /* FRLTableAllCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLTableAllCategories.m; sourceTree = "<group>"; };
 		4B86E3BD18D837CF0087518A /* FRLTableAllCategories.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRLTableAllCategories.xib; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				4B86E3C118D83B5D0087518A /* FRLTableFavourites.h */,
 				4B86E3C218D83B5D0087518A /* FRLTableFavourites.m */,
 				4B86E3C318D83B5D0087518A /* FRLTableFavourites.xib */,
+				4B5FF63618E212B800DE9A0F /* FRLProductGroup.h */,
+				4B5FF63718E212B800DE9A0F /* FRLProductGroup.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 			files = (
 				4B9F931D18D3279000752625 /* FRLProducts.m in Sources */,
 				4B86E3C918D872FF0087518A /* FRLTableViewCell.m in Sources */,
+				4B5FF63818E212B800DE9A0F /* FRLProductGroup.m in Sources */,
 				4B86E3BE18D837CF0087518A /* FRLTableAllCategories.m in Sources */,
 				4B86E3D018D89CF10087518A /* FRLMainCategory.m in Sources */,
 				4BDF6B5C18E023C500DE8612 /* FRLProductDetailed.m in Sources */,

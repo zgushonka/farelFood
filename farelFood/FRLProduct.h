@@ -10,6 +10,7 @@
 
 @interface FRLProduct : NSObject <NSCoding>
 
+@property (nonatomic, strong) NSString *id;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSString *image;

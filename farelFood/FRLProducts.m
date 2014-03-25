@@ -37,7 +37,8 @@
     
     [rootXML iterate:@"products.product" usingBlock:^(RXMLElement *rxmlProduct){
         FRLProduct *newProduct = [[FRLProduct alloc] init];
-        
+    
+        newProduct.id = [rxmlProduct attribute:@"id"];
         newProduct.name = [rxmlProduct child:@"name"].text;
         newProduct.description = [rxmlProduct child:@"description"].text;
         newProduct.image = [rxmlProduct child:@"image"].text;
