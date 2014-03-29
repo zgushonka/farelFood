@@ -13,6 +13,9 @@
 #import "FRLMainCategories.h"
 
 
+#import "FRLProductGroup.h"
+#import "FRLProduct.h"
+
 
 @implementation FRLAppDelegate
 
@@ -48,7 +51,37 @@
     [mainTabController addChildViewController:favouritesNavigationController];
     
     
+/*
+    FRLProductGroup *favGroup = [[FRLProductGroup alloc] init];
     
+    NSMutableSet *tags = [NSMutableSet setWithObject:@"fruits"];
+    
+    NSArray *fruits = [categoriesController.productsDatabase productsConformingTags:tags];
+    
+    FRLProduct *banana = [fruits firstObject];
+    FRLProduct *cherry = [fruits lastObject];
+    
+    
+//    [favGroup addProduct:banana];
+//    [favGroup syncInstance];
+    
+    
+    FRLProductGroup *newGroup = [FRLProductGroup singleInstance];
+//    [newGroup addProduct:cherry];
+//    [newGroup syncInstance];
+    
+//    [favGroup addProduct:cherry];
+    
+    
+    NSLog(@"Result: %d", [newGroup doesGroupContainTheProduct:cherry]);
+    
+    
+    
+//    NSArray *productsInGroup = [categoriesController.productsDatabase productsConformingGroup:favGroup];
+    
+//    NSLog(@"resulting array is %d", [productsInGroup count]);
+*/
+     
     self.window.rootViewController = mainTabController;
 
 }

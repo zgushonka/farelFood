@@ -7,8 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+@class FRLProduct;
 
 @interface FRLProductGroup : NSObject
-@property (nonatomic, strong) NSMutableArray *members;
+
++ (FRLProductGroup *)singleInstance;
+- (void)syncInstance;
+
+- (void)addProduct:(FRLProduct *)product;
+- (void)removeProduct:(FRLProduct *)product;
+- (BOOL)doesGroupContainTheProduct:(FRLProduct *)product;
 
 @end

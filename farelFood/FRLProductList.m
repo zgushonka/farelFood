@@ -65,7 +65,6 @@
     [cell.name setAttributedText:currentProductAttributedName];
     [cell.description setAttributedText:currentProductAttributedDescription];
     [cell.preview setImage:[UIImage imageNamed:currentProduct.image]];
-//    cell.image.frame = CGRectMake(0, 0, 160, 160);
     
     
     

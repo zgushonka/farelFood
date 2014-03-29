@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4B5FF63818E212B800DE9A0F /* FRLProductGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5FF63718E212B800DE9A0F /* FRLProductGroup.m */; };
+		4B64539F18E733A700D5B8CD /* favButtonUnfavourited.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B64539E18E733A700D5B8CD /* favButtonUnfavourited.png */; };
+		4B6453A118E733B200D5B8CD /* favButtonFavourited.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B6453A018E733B200D5B8CD /* favButtonFavourited.png */; };
 		4B86E3BE18D837CF0087518A /* FRLTableAllCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3BC18D837CF0087518A /* FRLTableAllCategories.m */; };
 		4B86E3BF18D837CF0087518A /* FRLTableAllCategories.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B86E3BD18D837CF0087518A /* FRLTableAllCategories.xib */; };
 		4B86E3C418D83B5D0087518A /* FRLTableFavourites.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B86E3C218D83B5D0087518A /* FRLTableFavourites.m */; };
@@ -58,6 +60,8 @@
 		48B935B69F0E4537B115F1BA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4B5FF63618E212B800DE9A0F /* FRLProductGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLProductGroup.h; sourceTree = "<group>"; };
 		4B5FF63718E212B800DE9A0F /* FRLProductGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLProductGroup.m; sourceTree = "<group>"; };
+		4B64539E18E733A700D5B8CD /* favButtonUnfavourited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favButtonUnfavourited.png; sourceTree = "<group>"; };
+		4B6453A018E733B200D5B8CD /* favButtonFavourited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favButtonFavourited.png; sourceTree = "<group>"; };
 		4B86E3BB18D837CF0087518A /* FRLTableAllCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRLTableAllCategories.h; sourceTree = "<group>"; };
 		4B86E3BC18D837CF0087518A /* FRLTableAllCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRLTableAllCategories.m; sourceTree = "<group>"; };
 		4B86E3BD18D837CF0087518A /* FRLTableAllCategories.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRLTableAllCategories.xib; sourceTree = "<group>"; };
@@ -85,7 +89,7 @@
 		4B9375ED18D2FCB80056D7D0 /* farelFood-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "farelFood-Prefix.pch"; sourceTree = "<group>"; };
 		4B9375EE18D2FCB80056D7D0 /* FRLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRLAppDelegate.h; sourceTree = "<group>"; };
 		4B9375EF18D2FCB80056D7D0 /* FRLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRLAppDelegate.m; sourceTree = "<group>"; };
-		4B9375F118D2FCB80056D7D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4B9375F118D2FCB80056D7D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = farelFood/Images.xcassets; sourceTree = "<group>"; };
 		4B9375F718D2FCB80056D7D0 /* farelFoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = farelFoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9375F818D2FCB80056D7D0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4B93760018D2FCB80056D7D0 /* farelFoodTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "farelFoodTests-Info.plist"; sourceTree = "<group>"; };
@@ -149,8 +153,6 @@
 				4B86E3C118D83B5D0087518A /* FRLTableFavourites.h */,
 				4B86E3C218D83B5D0087518A /* FRLTableFavourites.m */,
 				4B86E3C318D83B5D0087518A /* FRLTableFavourites.xib */,
-				4B5FF63618E212B800DE9A0F /* FRLProductGroup.h */,
-				4B5FF63718E212B800DE9A0F /* FRLProductGroup.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				4B9375E518D2FCB80056D7D0 /* farelFood */,
+				4B9375F118D2FCB80056D7D0 /* Images.xcassets */,
 				4B9375FE18D2FCB80056D7D0 /* farelFoodTests */,
 				4B9375DE18D2FCB80056D7D0 /* Frameworks */,
 				4B9375DD18D2FCB80056D7D0 /* Products */,
@@ -192,7 +195,6 @@
 			children = (
 				4B86E3C018D837D90087518A /* Controllers */,
 				4B93761418D307BE0056D7D0 /* Model */,
-				4B9375F118D2FCB80056D7D0 /* Images.xcassets */,
 				4B9375E618D2FCB80056D7D0 /* Supporting Files */,
 			);
 			path = farelFood;
@@ -208,6 +210,8 @@
 				4B9375E818D2FCB80056D7D0 /* InfoPlist.strings */,
 				4B9375EB18D2FCB80056D7D0 /* main.m */,
 				4B9375ED18D2FCB80056D7D0 /* farelFood-Prefix.pch */,
+				4B6453A018E733B200D5B8CD /* favButtonFavourited.png */,
+				4B64539E18E733A700D5B8CD /* favButtonUnfavourited.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -257,6 +261,8 @@
 				4B86E3CC18D894A90087518A /* FRLMainCategories.m */,
 				4B86E3CE18D89CF10087518A /* FRLMainCategory.h */,
 				4B86E3CF18D89CF10087518A /* FRLMainCategory.m */,
+				4B5FF63618E212B800DE9A0F /* FRLProductGroup.h */,
+				4B5FF63718E212B800DE9A0F /* FRLProductGroup.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -342,12 +348,14 @@
 				4BDF6B6818E0314A00DE8612 /* 3.jpg in Resources */,
 				4B9375EA18D2FCB80056D7D0 /* InfoPlist.strings in Resources */,
 				4B86E3BF18D837CF0087518A /* FRLTableAllCategories.xib in Resources */,
+				4B64539F18E733A700D5B8CD /* favButtonUnfavourited.png in Resources */,
 				4BDF6B6718E0314A00DE8612 /* 2.jpg in Resources */,
 				4B86E3CA18D872FF0087518A /* FRLTableViewCell.xib in Resources */,
 				4B86E3D218D98B4B0087518A /* Main Categories.xml in Resources */,
 				4B86E3DC18D9B69A0087518A /* FRLProductList.xib in Resources */,
 				4B9375F218D2FCB80056D7D0 /* Images.xcassets in Resources */,
 				4BDF6B6E18E04DE000DE8612 /* bread.jpg in Resources */,
+				4B6453A118E733B200D5B8CD /* favButtonFavourited.png in Resources */,
 				4BDF6B6618E0314A00DE8612 /* 1.jpg in Resources */,
 				4B93760F18D303440056D7D0 /* Products.xml in Resources */,
 				4BDF6B6C18E04DE000DE8612 /* fruits.jpg in Resources */,

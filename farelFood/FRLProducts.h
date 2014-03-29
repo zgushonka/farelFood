@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+@class FRLProductGroup;
 
 @interface FRLProducts : NSObject
-//@property (nonatomic, strong, readonly) NSMutableArray *products;
 
 + (FRLProducts *)sharedDataBase;
 
 - (void)loadXMLFile:(NSString *)xmlFile loadedSuccessfully:(BOOL *)status;
 - (NSUInteger)countOfProducts;
 - (NSMutableArray *)productsConformingTags:(NSMutableSet *)tags;
+- (NSMutableArray *)productsConformingGroup:(FRLProductGroup *)group;
 
 @end

@@ -9,13 +9,21 @@
 #import "FRLProductDetailed.h"
 #import "FRLProduct.h"
 
+//!---------TEMP
+
+#import "FRLProductGroup.h"
+
+//-------------!
+
 @interface FRLProductDetailed ()
 
 @property (nonatomic, strong) UIImageView *image;
 @property (nonatomic, strong) UITextView *description;
 @property (nonatomic, strong) UILabel *status;
-@property (nonatomic, strong) UIButton *favourites;
+@property (nonatomic, strong) UIButton *favButton;
 @property (nonatomic, strong) UIView *statusView;
+
+@property (nonatomic, strong) FRLProductGroup *favourites;
 
 @end
 
@@ -37,23 +45,22 @@
 - (void)setupProductImage
 {
     self.image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.product.image]];
-    self.image.frame = CGRectMake(0, 0, 320, 200);
+    [self.image setFrame:CGRectMake(0, 0, 320, 200)];
     [self.view addSubview:self.image];
 }
 
 - (void)setupProductStatus
 {
     self.status = [[UILabel alloc] initWithFrame:CGRectMake(20, 205, 150, 50)];
-//    self.status.backgroundColor = [UIColor blackColor];
-    self.status.text = self.product.status;
-    self.status.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    [self.status setText:self.product.status];
+    [self.status setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
     
     if ([self.product.status isEqualToString:@"Allowed"]) {
-        self.status.textColor = [UIColor greenColor];
+        [self.status setTextColor:[UIColor greenColor]];
     }
     
     if ([self.product.status isEqualToString:@"Not recommended"]) {
-        self.status.textColor = [UIColor redColor];
+        [self.status setTextColor:[UIColor redColor]];
     }
     
     [self.view addSubview:self.status];
@@ -61,21 +68,44 @@
 
 - (void)setupFavouritesButton
 {
-    self.favourites = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.favourites.frame = CGRectMake(200, 205, 50, 50);
-    [self.favourites setTitle:@"fav" forState:UIControlStateNormal];
-    
-    [self.view addSubview:self.favourites];
+    self.favButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.favButton setFrame:CGRectMake(200, 205, 50, 50)];
+    [self.favButton addTarget:self action:@selector(favButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self refreshFavouritesButtonState];
+    [self.view addSubview:self.favButton];
 }
 
+- (void)refreshFavouritesButtonState
+{
+    if ([self.favourites doesGroupContainTheProduct:self.product]) {
+        [self.favButton setImage:[UIImage imageNamed:@"favButtonFavourited.png"] forState:UIControlStateNormal];
+    }
+    
+    else {
+        [self.favButton setImage:[UIImage imageNamed:@"favButtonUnfavourited.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (void)favButtonPressed
+{
+    if ([self.favourites doesGroupContainTheProduct:self.product]) {
+        [self.favourites removeProduct:self.product];
+    }
+
+    else {
+        [self.favourites addProduct:self.product];
+    }
+    
+    [self refreshFavouritesButtonState];
+}
 
 - (void)setupProductDescription
 {
     self.description = [[UITextView alloc] initWithFrame:CGRectMake(15, 250, 300, 0)];
-    self.description.text = self.product.description;
+    [self.description setText:self.product.description];
     [self.description sizeToFit];
-    self.description.scrollEnabled = NO;
-    self.description.editable = NO;
+    [self.description setScrollEnabled:NO];
+    [self.description setEditable:NO];
     [self.view addSubview:self.description];
 }
 
@@ -89,22 +119,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.favourites = [FRLProductGroup singleInstance];
     self.view = [[UIScrollView alloc] init];
-    self.view.delegate = self;
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view setDelegate:self];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     
     [self setupProductImage];
     [self setupProductDescription];
     [self setupProductStatus];
-    
-    
-    /*
-    self.statusView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, 320, 60)];
-    self.statusView.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:self.statusView];
-    */
-    
+    [self setupFavouritesButton];
     [self setupViewSizeToFitContent];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

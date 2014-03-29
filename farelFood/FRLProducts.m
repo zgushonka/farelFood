@@ -9,6 +9,7 @@
 #import "FRLProducts.h"
 #import "FRLProduct.h"
 #import "RXMLElement.h"
+#import "FRLProductGroup.h"
 
 @interface FRLProducts ()
 @property (strong, nonatomic) NSMutableArray *products;
@@ -74,6 +75,18 @@
     NSMutableArray *_conformingProducts = [[NSMutableArray alloc] init];
     for (FRLProduct *_currentProduct in self.products) {
         if ([tags isSubsetOfSet:_currentProduct.tags]) {
+            [_conformingProducts addObject:_currentProduct];
+        }
+    }
+    
+    return _conformingProducts;
+}
+
+- (NSMutableArray *)productsConformingGroup:(FRLProductGroup *)group
+{
+    NSMutableArray *_conformingProducts = [[NSMutableArray alloc] init];
+    for (FRLProduct *_currentProduct in self.products) {
+        if ([group doesGroupContainTheProduct:_currentProduct]) {
             [_conformingProducts addObject:_currentProduct];
         }
     }
