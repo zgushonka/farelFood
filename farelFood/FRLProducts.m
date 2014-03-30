@@ -17,7 +17,7 @@
 
 @implementation FRLProducts
 
-+ (FRLProducts *)sharedDataBase
++ (instancetype)sharedDataBase
 {
     static FRLProducts *_database;
     
@@ -26,7 +26,7 @@
         if (!_database) {
             _database = [[FRLProducts alloc] init];
         }
-        
+
         return _database;
     }
 }
@@ -60,19 +60,19 @@
 - (NSMutableArray *)products
 {
     if (!_products) {
-        _products = [[NSMutableArray alloc] init];
+        _products = [NSMutableArray array];
     }
     return _products;
 }
 
-- (NSUInteger)countOfProducts
+- (NSUInteger)count
 {
     return [self.products count];
 }
 
-- (NSMutableArray *)productsConformingTags:(NSMutableSet *)tags
+- (NSArray *)productsConformingTags:(NSMutableSet *)tags
 {
-    NSMutableArray *_conformingProducts = [[NSMutableArray alloc] init];
+    NSMutableArray *_conformingProducts = [NSMutableArray array];
     for (FRLProduct *_currentProduct in self.products) {
         if ([tags isSubsetOfSet:_currentProduct.tags]) {
             [_conformingProducts addObject:_currentProduct];
@@ -82,16 +82,16 @@
     return _conformingProducts;
 }
 
-- (NSMutableArray *)productsConformingGroup:(FRLProductGroup *)group
+- (NSArray *)productsConformingGroup:(FRLProductGroup *)group
 {
-    NSMutableArray *_conformingProducts = [[NSMutableArray alloc] init];
-    for (FRLProduct *_currentProduct in self.products) {
-        if ([group doesGroupContainTheProduct:_currentProduct]) {
-            [_conformingProducts addObject:_currentProduct];
+    NSMutableArray *conformingProducts = [NSMutableArray array];
+    for (FRLProduct *currentProduct in self.products) {
+        if ([group doesGroupContainTheProduct:currentProduct]) {
+            [conformingProducts addObject:currentProduct];
         }
     }
     
-    return _conformingProducts;
+    return conformingProducts;
 }
 
 @end

@@ -17,9 +17,9 @@
 @property (nonatomic, strong) NSString *status;
 @property (nonatomic, strong) NSMutableSet *tags;
 
-- (instancetype) initWithName:(NSString *)name andDescription:(NSString *)description andTags:(NSMutableSet *)tags;
-- (void)addTag:(NSString *)tag;
-- (void)removeTag:(NSString *)tag;
+- (instancetype) initWithName:(NSString *)name andDescription:(NSString *)description andTags:(NSMutableSet *)tags; //deprecated
+- (void)addTag:(NSString *)tag; //for test purposes only
+- (void)removeTag:(NSString *)tag; //for test purposes only
 
 
 

@@ -10,7 +10,7 @@
 
 @implementation FRLProduct
 
-- (id)initWithCoder:(NSCoder *)decoder
+- (id)initWithCoder:(NSCoder *)decoder //deprecated
 {
     self = [super init];
     if (!self) {
@@ -24,7 +24,7 @@
     return self;
 }
 
-- (void)encodeWithCoder:(NSCoder *)encoder
+- (void)encodeWithCoder:(NSCoder *)encoder //derecated
 {
     [encoder encodeObject:self.name forKey:@"name"];
     [encoder encodeObject:self.description forKey:@"description"];

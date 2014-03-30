@@ -13,9 +13,6 @@
 #import "FRLMainCategories.h"
 
 
-#import "FRLProductGroup.h"
-#import "FRLProduct.h"
-
 
 @implementation FRLAppDelegate
 
@@ -36,52 +33,23 @@
 
     UINavigationController *categoriesNavigationController = [[UINavigationController alloc] initWithRootViewController:categoriesController];
     categoriesNavigationController.title = @"All products";
-    categoriesNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:252/255.0f green:142/255.0f blue:0/255.0f alpha:0.0001f];
+//    categoriesNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:252/255.0f green:142/255.0f blue:0/255.0f alpha:0.0001f];
     
     
 
     UINavigationController *favouritesNavigationController = [[UINavigationController alloc] initWithRootViewController:favouritesController];
     favouritesNavigationController.title = @"Favourites";
+    favouritesNavigationController.tabBarItem.image = [UIImage imageNamed:@"favButtonFavourited.png"];
     
     
 
     UITabBarController *mainTabController = [[UITabBarController alloc] init];
-    mainTabController.tabBar.barTintColor = [UIColor colorWithRed:252/255.0f green:142/255.0f blue:0/255.0f alpha:0.0001f];
+//    mainTabController.tabBar.barTintColor = [UIColor colorWithRed:252/255.0f green:142/255.0f blue:0/255.0f alpha:0.0001f];
     [mainTabController addChildViewController:categoriesNavigationController];
     [mainTabController addChildViewController:favouritesNavigationController];
     
     
-/*
-    FRLProductGroup *favGroup = [[FRLProductGroup alloc] init];
     
-    NSMutableSet *tags = [NSMutableSet setWithObject:@"fruits"];
-    
-    NSArray *fruits = [categoriesController.productsDatabase productsConformingTags:tags];
-    
-    FRLProduct *banana = [fruits firstObject];
-    FRLProduct *cherry = [fruits lastObject];
-    
-    
-//    [favGroup addProduct:banana];
-//    [favGroup syncInstance];
-    
-    
-    FRLProductGroup *newGroup = [FRLProductGroup singleInstance];
-//    [newGroup addProduct:cherry];
-//    [newGroup syncInstance];
-    
-//    [favGroup addProduct:cherry];
-    
-    
-    NSLog(@"Result: %d", [newGroup doesGroupContainTheProduct:cherry]);
-    
-    
-    
-//    NSArray *productsInGroup = [categoriesController.productsDatabase productsConformingGroup:favGroup];
-    
-//    NSLog(@"resulting array is %d", [productsInGroup count]);
-*/
-     
     self.window.rootViewController = mainTabController;
 
 }

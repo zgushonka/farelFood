@@ -16,7 +16,7 @@
 
 @implementation FRLProductGroup
 
-+ (FRLProductGroup *)singleInstance
++ (instancetype)singleInstance
 {
     static FRLProductGroup *_instance;
     
@@ -38,9 +38,7 @@
         if (!_archive) {
             _members = [[NSMutableOrderedSet alloc] init];
             [self syncInstance];
-        }
-        
-        else {
+        } else {
             _members = [NSKeyedUnarchiver unarchiveObjectWithData:_archive];
         }
     }

@@ -16,7 +16,7 @@
 
 @implementation FRLMainCategories
 
-+ (FRLMainCategories *)sharedDataBase
++ (instancetype)sharedDataBase
 {
     static FRLMainCategories *_database;
     
@@ -62,7 +62,7 @@
     return _categories;
 }
 
-- (NSUInteger)countOfMainCategories;
+- (NSUInteger)count;
 {
     return [self.categories count];
 }

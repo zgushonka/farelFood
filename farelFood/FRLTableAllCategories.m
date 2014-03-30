@@ -46,7 +46,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.mainCategoriesDatabase countOfMainCategories];
+    return [self.mainCategoriesDatabase count];
 }
 
 
@@ -61,7 +61,6 @@
     FRLMainCategory *currentCategory = [self.mainCategoriesDatabase categoryAtIndex:indexPath.row];
     
     NSAttributedString *currentCategoryAttributedName = [[NSAttributedString alloc] initWithString:currentCategory.name attributes:@{ NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleBody]}];
-
     
     NSAttributedString *currentCategoryAttributedDescription = [[NSAttributedString alloc] initWithString:currentCategory.description attributes:@{ NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1], NSForegroundColorAttributeName : [UIColor grayColor]}];
     
@@ -69,7 +68,6 @@
     [cell.description setAttributedText:currentCategoryAttributedDescription];
     [cell.preview setImage:[UIImage imageNamed:currentCategory.image]];
     
-
     return cell;
     
 }

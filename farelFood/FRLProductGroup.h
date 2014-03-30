@@ -11,7 +11,7 @@
 
 @interface FRLProductGroup : NSObject
 
-+ (FRLProductGroup *)singleInstance;
++ (instancetype)singleInstance;
 - (void)syncInstance;
 
 - (void)addProduct:(FRLProduct *)product;

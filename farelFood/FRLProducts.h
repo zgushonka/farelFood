@@ -11,11 +11,11 @@
 
 @interface FRLProducts : NSObject
 
-+ (FRLProducts *)sharedDataBase;
++ (instancetype)sharedDataBase;
 
 - (void)loadXMLFile:(NSString *)xmlFile loadedSuccessfully:(BOOL *)status;
-- (NSUInteger)countOfProducts;
-- (NSMutableArray *)productsConformingTags:(NSMutableSet *)tags;
-- (NSMutableArray *)productsConformingGroup:(FRLProductGroup *)group;
+- (NSUInteger)count;
+- (NSArray *)productsConformingTags:(NSMutableSet *)tags;
+- (NSArray *)productsConformingGroup:(FRLProductGroup *)group;
 
 @end
