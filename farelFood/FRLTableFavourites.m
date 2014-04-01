@@ -13,9 +13,6 @@
 #import "FRLTableViewCell.h"
 #import "FRLProductDetailed.h"
 
-@interface FRLTableFavourites ()
-
-@end
 
 @implementation FRLTableFavourites
 
@@ -33,15 +30,9 @@
 }
 
 #pragma mark - Table view data source
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //!
-    self.productsToDisplay = [self.productsDatabase productsConformingGroup:self.favourites];
-    //!
     return [self.productsToDisplay count];
-    NSLog (@"There are: %d", [self.productsToDisplay count]);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -50,10 +41,6 @@
     if (cell == nil) {
         cell = [[FRLTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ProductIdentifier"];
     }
-    
-    //!
-    self.productsToDisplay = [self.productsDatabase productsConformingGroup:self.favourites];
-    //!
     FRLProduct *currentProduct = [self.productsToDisplay objectAtIndex:indexPath.row];
     
     NSAttributedString *currentProductAttributedName = [[NSAttributedString alloc] initWithString:currentProduct.name attributes:@{ NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleBody]}];
@@ -66,6 +53,7 @@
     return cell;
 }
 
+#pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FRLProduct *selectedProduct = [self.productsToDisplay objectAtIndex:indexPath.row];
