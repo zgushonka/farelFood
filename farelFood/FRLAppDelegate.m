@@ -19,18 +19,21 @@
 - (void)setupControllers
 {
     FRLTableAllCategories *categoriesController = [[FRLTableAllCategories alloc] init];
+    categoriesController.title = @"Categories";
     categoriesController.mainCategoriesDatabase = [FRLMainCategories sharedDataBase];
     [categoriesController.mainCategoriesDatabase loadXMLFile:@"Main Categories.xml" loadedSuccessfully:nil];
-    categoriesController.productsDatabase = [FRLProducts sharedDataBase];
-    [categoriesController.productsDatabase loadXMLFile:@"Products.xml" loadedSuccessfully:nil];
-    categoriesController.title = @"Categories";
     
-    
-
     FRLTableFavourites *favouritesController = [[FRLTableFavourites alloc] init];
+    favouritesController.title = @"Favourites";
+    
+    FRLProducts *sharedProductsDatabase = [FRLProducts sharedDataBase];
+    [sharedProductsDatabase loadXMLFile:@"Products.xml" loadedSuccessfully:nil];
+    
+    categoriesController.productsDatabase = sharedProductsDatabase;
+    favouritesController.productsDatabase = sharedProductsDatabase;
     
     
-
+    
     UINavigationController *categoriesNavigationController = [[UINavigationController alloc] initWithRootViewController:categoriesController];
     categoriesNavigationController.title = @"All products";
 //    categoriesNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:252/255.0f green:142/255.0f blue:0/255.0f alpha:0.0001f];

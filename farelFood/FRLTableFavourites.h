@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class FRLProducts;
+@class FRLProductGroup;
 
 @interface FRLTableFavourites : UITableViewController
+@property (nonatomic, strong) FRLProductGroup *favourites;
+@property (nonatomic, strong) FRLProducts *productsDatabase;
+@property (nonatomic, strong) NSArray *productsToDisplay;
 
 @end
