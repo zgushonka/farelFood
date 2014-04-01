@@ -8,12 +8,7 @@
 
 #import "FRLProductDetailed.h"
 #import "FRLProduct.h"
-
-//!---------TEMP
-
 #import "FRLProductGroup.h"
-
-//-------------!
 
 @interface FRLProductDetailed ()
 
