@@ -11,7 +11,6 @@
 #import "FRLProduct.h"
 #import "FRLProductDetailed.h"
 
-
 @implementation FRLProductList
 
 - (void)viewDidLoad

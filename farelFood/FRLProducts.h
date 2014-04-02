@@ -12,7 +12,6 @@
 @interface FRLProducts : NSObject
 
 + (instancetype)sharedDataBase;
-
 - (void)loadXMLFile:(NSString *)xmlFile loadedSuccessfully:(BOOL *)status;
 - (NSUInteger)count;
 - (NSArray *)productsConformingTags:(NSMutableSet *)tags;

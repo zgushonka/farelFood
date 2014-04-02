@@ -20,13 +20,11 @@
 + (instancetype)sharedDataBase
 {
     static FRLProducts *_database;
-    
     @synchronized (self)
     {
         if (!_database) {
             _database = [[FRLProducts alloc] init];
         }
-
         return _database;
     }
 }
@@ -38,7 +36,6 @@
     
     [rootXML iterate:@"products.product" usingBlock:^(RXMLElement *rxmlProduct){
         FRLProduct *newProduct = [[FRLProduct alloc] init];
-    
         newProduct.id = [rxmlProduct attribute:@"id"];
         newProduct.name = [rxmlProduct child:@"name"].text;
         newProduct.description = [rxmlProduct child:@"description"].text;
@@ -46,13 +43,11 @@
         newProduct.status = [rxmlProduct child:@"status"].text;
         
         NSMutableSet *newProductTags = [[NSMutableSet alloc] init];
-        
         [rxmlProduct iterate:@"tag" usingBlock:^(RXMLElement *rxmlProductTag){
             
             [newProductTags addObject:rxmlProductTag.text];
         }];
         newProduct.tags = newProductTags;
-        
         [self.products addObject:newProduct];
     }];
 }
@@ -72,14 +67,13 @@
 
 - (NSArray *)productsConformingTags:(NSMutableSet *)tags
 {
-    NSMutableArray *_conformingProducts = [NSMutableArray array];
-    for (FRLProduct *_currentProduct in self.products) {
-        if ([tags isSubsetOfSet:_currentProduct.tags]) {
-            [_conformingProducts addObject:_currentProduct];
+    NSMutableArray *conformingProducts = [NSMutableArray array];
+    for (FRLProduct *currentProduct in self.products) {
+        if ([tags isSubsetOfSet:currentProduct.tags]) {
+            [conformingProducts addObject:currentProduct];
         }
     }
-    
-    return _conformingProducts;
+    return conformingProducts;
 }
 
 - (NSArray *)productsConformingGroup:(FRLProductGroup *)group
@@ -90,7 +84,6 @@
             [conformingProducts addObject:currentProduct];
         }
     }
-    
     return conformingProducts;
 }
 

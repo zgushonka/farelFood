@@ -13,28 +13,53 @@
 #import "FRLProducts.h"
 #import "FRLProductList.h"
 
+@interface FRLTableAllCategories ()
+@property (nonatomic, strong) UISearchBar *bar;
+@end
 
 @implementation FRLTableAllCategories
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self.tableView registerNib:[UINib nibWithNibName:@"FRLTableViewCell" bundle:nil] forCellReuseIdentifier:@"CategoryIdentifier"];
     [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     
   //!-- REWRITE THIS
-    UISearchBar *new = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
-    self.tableView.tableHeaderView = new;
+    self.bar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
+    self.bar.placeholder = @"Type product name or description here";
+    self.bar.searchBarStyle = UISearchBarStyleProminent;
+    self.bar.delegate = self;
+    self.tableView.tableHeaderView = self.bar;
   //----!
 }
+
+
+//!-- THIS BLOCK IS USED FOR TRAINING PURPOSES ONLY
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    NSLog(@"Text %@ has been entered", searchText);
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSLog(@"Search bar clicked");
+    [self.bar resignFirstResponder];
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    NSLog(@"Clear bar clicked");
+    [self.bar resignFirstResponder];
+    self.bar.text = @"";
+}
+//--!
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.mainCategoriesDatabase count];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

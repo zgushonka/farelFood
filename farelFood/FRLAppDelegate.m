@@ -32,29 +32,20 @@
     categoriesController.productsDatabase = sharedProductsDatabase;
     favouritesController.productsDatabase = sharedProductsDatabase;
     
-    
-    
     UINavigationController *categoriesNavigationController = [[UINavigationController alloc] initWithRootViewController:categoriesController];
     categoriesNavigationController.title = @"All products";
 //    categoriesNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:252/255.0f green:142/255.0f blue:0/255.0f alpha:0.0001f];
     
-    
-
     UINavigationController *favouritesNavigationController = [[UINavigationController alloc] initWithRootViewController:favouritesController];
     favouritesNavigationController.title = @"Favourites";
     favouritesNavigationController.tabBarItem.image = [UIImage imageNamed:@"favButtonFavourited.png"];
-    
-    
 
     UITabBarController *mainTabController = [[UITabBarController alloc] init];
 //    mainTabController.tabBar.barTintColor = [UIColor colorWithRed:252/255.0f green:142/255.0f blue:0/255.0f alpha:0.0001f];
     [mainTabController addChildViewController:categoriesNavigationController];
     [mainTabController addChildViewController:favouritesNavigationController];
     
-    
-    
     self.window.rootViewController = mainTabController;
-
 }
 
 
