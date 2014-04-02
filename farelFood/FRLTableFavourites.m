@@ -7,37 +7,36 @@
 //
 
 #import "FRLTableFavourites.h"
+#import "FRLProductGroup.h"
+#import "FRLProducts.h"
 
 @interface FRLTableFavourites ()
-
+@property BOOL isFirstAppear;
 @end
 
 @implementation FRLTableFavourites
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.isFirstAppear = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.favourites = [FRLProductGroup singleInstance];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
+    self.productsToDisplay = [self.productsDatabase productsConformingGroup:self.favourites];
+    if (!self.isFirstAppear) {
+        [self.tableView reloadData];
+    }
+    self.isFirstAppear = NO;
 }
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
-
 @end

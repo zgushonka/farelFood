@@ -13,7 +13,6 @@
 
 + (instancetype)singleInstance;
 - (void)syncInstance;
-
 - (void)addProduct:(FRLProduct *)product;
 - (void)removeProduct:(FRLProduct *)product;
 - (BOOL)doesGroupContainTheProduct:(FRLProduct *)product;

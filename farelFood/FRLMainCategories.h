@@ -10,10 +10,8 @@
 @class FRLMainCategory;
 
 @interface FRLMainCategories : NSObject
-//@property (strong, nonatomic) NSMutableArray *categories;
 
 + (instancetype)sharedDataBase;
-
 - (void)loadXMLFile:(NSString *)xmlFile loadedSuccessfully:(BOOL *)status;
 - (NSUInteger)count;
 - (FRLMainCategory *)categoryAtIndex:(NSUInteger)index;

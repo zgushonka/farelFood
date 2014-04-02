@@ -8,21 +8,14 @@
 
 #import "FRLProductDetailed.h"
 #import "FRLProduct.h"
-
-//!---------TEMP
-
 #import "FRLProductGroup.h"
 
-//-------------!
-
 @interface FRLProductDetailed ()
-
 @property (nonatomic, strong) UIImageView *image;
 @property (nonatomic, strong) UITextView *description;
 @property (nonatomic, strong) UILabel *status;
 @property (nonatomic, strong) UIButton *favButton;
 @property (nonatomic, strong) UIView *statusView;
-
 @property (nonatomic, strong) FRLProductGroup *favourites;
 
 @end
@@ -39,6 +32,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+//    This is for testing purposes only
 //    NSLog(@"Content offset X = %f and Y = %f", scrollView.contentOffset.x, scrollView.contentOffset.y);
 }
 
@@ -58,11 +52,9 @@
     if ([self.product.status isEqualToString:@"Allowed"]) {
         [self.status setTextColor:[UIColor greenColor]];
     }
-    
     if ([self.product.status isEqualToString:@"Not recommended"]) {
         [self.status setTextColor:[UIColor redColor]];
     }
-    
     [self.view addSubview:self.status];
 }
 
@@ -71,6 +63,8 @@
     self.favButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.favButton setFrame:CGRectMake(200, 205, 50, 50)];
     [self.favButton addTarget:self action:@selector(favButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.favButton setImage:[UIImage imageNamed:@"favButtonFavourited.png"] forState:UIControlStateNormal];
+    
     [self refreshFavouritesButtonState];
     [self.view addSubview:self.favButton];
 }
@@ -79,9 +73,7 @@
 {
     if ([self.favourites doesGroupContainTheProduct:self.product]) {
         [self.favButton setImage:[UIImage imageNamed:@"favButtonFavourited.png"] forState:UIControlStateNormal];
-    }
-    
-    else {
+    } else {
         [self.favButton setImage:[UIImage imageNamed:@"favButtonUnfavourited.png"] forState:UIControlStateNormal];
     }
 }
@@ -90,12 +82,9 @@
 {
     if ([self.favourites doesGroupContainTheProduct:self.product]) {
         [self.favourites removeProduct:self.product];
-    }
-
-    else {
+    } else {
         [self.favourites addProduct:self.product];
     }
-    
     [self refreshFavouritesButtonState];
 }
 
@@ -109,8 +98,6 @@
     [self.view addSubview:self.description];
 }
 
-
-
 - (void)setupViewSizeToFitContent
 {
     self.view.contentSize = CGSizeMake(320, self.description.frame.origin.y + self.description.frame.size.height);
@@ -123,19 +110,11 @@
     self.view = [[UIScrollView alloc] init];
     [self.view setDelegate:self];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    
     [self setupProductImage];
     [self setupProductDescription];
     [self setupProductStatus];
     [self setupFavouritesButton];
     [self setupViewSizeToFitContent];
-    
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
 }
 
 @end

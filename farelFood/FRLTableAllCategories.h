@@ -10,7 +10,7 @@
 @class FRLMainCategories;
 @class FRLProducts;
 
-@interface FRLTableAllCategories : UITableViewController
+@interface FRLTableAllCategories : UITableViewController <UISearchBarDelegate>
 @property (nonatomic, strong) FRLMainCategories *mainCategoriesDatabase;
 @property (nonatomic, strong) FRLProducts *productsDatabase;
 

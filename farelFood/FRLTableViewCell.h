@@ -13,6 +13,4 @@
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UILabel *description;
 
-
-
 @end

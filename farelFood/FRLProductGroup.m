@@ -19,13 +19,11 @@
 + (instancetype)singleInstance
 {
     static FRLProductGroup *_instance;
-    
     @synchronized (self)
     {
         if (!_instance) {
             _instance = [[FRLProductGroup alloc] init];
         }
-        
         return _instance;
     }
 }
@@ -34,22 +32,21 @@
 {
     self = [super init];
     if (self) {
-        NSData *_archive = [[NSUserDefaults standardUserDefaults] objectForKey:@"FRLProductGroup"];
-        if (!_archive) {
+        NSData *archive = [[NSUserDefaults standardUserDefaults] objectForKey:@"FRLProductGroup"];
+        if (!archive) {
             _members = [[NSMutableOrderedSet alloc] init];
             [self syncInstance];
         } else {
-            _members = [NSKeyedUnarchiver unarchiveObjectWithData:_archive];
+            _members = [NSKeyedUnarchiver unarchiveObjectWithData:archive];
         }
     }
     return self;
 }
 
-
 - (void)syncInstance
 {
-    NSData *_archive = [NSKeyedArchiver archivedDataWithRootObject:self.members];
-    [[NSUserDefaults standardUserDefaults] setObject:_archive forKey:@"FRLProductGroup"];
+    NSData *archive = [NSKeyedArchiver archivedDataWithRootObject:self.members];
+    [[NSUserDefaults standardUserDefaults] setObject:archive forKey:@"FRLProductGroup"];
 }
 
 - (void)addProduct:(FRLProduct *)product

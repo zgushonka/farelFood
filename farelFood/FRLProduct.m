@@ -24,7 +24,7 @@
     return self;
 }
 
-- (void)encodeWithCoder:(NSCoder *)encoder //derecated
+- (void)encodeWithCoder:(NSCoder *)encoder //deprecated
 {
     [encoder encodeObject:self.name forKey:@"name"];
     [encoder encodeObject:self.description forKey:@"description"];
