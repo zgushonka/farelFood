@@ -44,6 +44,8 @@
 		4BDF6B6D18E04DE000DE8612 /* vegetables.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF6B6A18E04DE000DE8612 /* vegetables.jpg */; };
 		4BDF6B6E18E04DE000DE8612 /* bread.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF6B6B18E04DE000DE8612 /* bread.jpg */; };
 		881DB9A85B32425E8DEAF70C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1330118CA84FF983195140 /* libPods.a */; };
+		E39204C618EC3EB900A9B3CA /* AllCategoriesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E39204C518EC3EB900A9B3CA /* AllCategoriesVC.m */; };
+		E39204C818EC543300A9B3CA /* MainBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39204C718EC543300A9B3CA /* MainBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,9 @@
 		4BDF6B6A18E04DE000DE8612 /* vegetables.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegetables.jpg; sourceTree = "<group>"; };
 		4BDF6B6B18E04DE000DE8612 /* bread.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bread.jpg; sourceTree = "<group>"; };
 		9D1330118CA84FF983195140 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E39204C418EC3EB900A9B3CA /* AllCategoriesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllCategoriesVC.h; sourceTree = "<group>"; };
+		E39204C518EC3EB900A9B3CA /* AllCategoriesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllCategoriesVC.m; sourceTree = "<group>"; };
+		E39204C718EC543300A9B3CA /* MainBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainBoard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				4B86E3BB18D837CF0087518A /* FRLTableAllCategories.h */,
+				E39204C418EC3EB900A9B3CA /* AllCategoriesVC.h */,
+				E39204C518EC3EB900A9B3CA /* AllCategoriesVC.m */,
 				4B86E3BC18D837CF0087518A /* FRLTableAllCategories.m */,
 				4B86E3BD18D837CF0087518A /* FRLTableAllCategories.xib */,
 				4B86E3D818D9B69A0087518A /* FRLProductList.h */,
@@ -193,6 +200,7 @@
 		4B9375E518D2FCB80056D7D0 /* farelFood */ = {
 			isa = PBXGroup;
 			children = (
+				E39204C718EC543300A9B3CA /* MainBoard.storyboard */,
 				4B86E3C018D837D90087518A /* Controllers */,
 				4B93761418D307BE0056D7D0 /* Model */,
 				4B9375E618D2FCB80056D7D0 /* Supporting Files */,
@@ -351,6 +359,7 @@
 				4B64539F18E733A700D5B8CD /* favButtonUnfavourited.png in Resources */,
 				4BDF6B6718E0314A00DE8612 /* 2.jpg in Resources */,
 				4B86E3CA18D872FF0087518A /* FRLTableViewCell.xib in Resources */,
+				E39204C818EC543300A9B3CA /* MainBoard.storyboard in Resources */,
 				4B86E3D218D98B4B0087518A /* Main Categories.xml in Resources */,
 				4B86E3DC18D9B69A0087518A /* FRLProductList.xib in Resources */,
 				4B9375F218D2FCB80056D7D0 /* Images.xcassets in Resources */,
@@ -413,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B9F931D18D3279000752625 /* FRLProducts.m in Sources */,
+				E39204C618EC3EB900A9B3CA /* AllCategoriesVC.m in Sources */,
 				4B86E3C918D872FF0087518A /* FRLTableViewCell.m in Sources */,
 				4B5FF63818E212B800DE9A0F /* FRLProductGroup.m in Sources */,
 				4B86E3BE18D837CF0087518A /* FRLTableAllCategories.m in Sources */,
@@ -497,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -529,7 +539,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
